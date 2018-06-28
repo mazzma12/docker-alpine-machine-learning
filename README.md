@@ -6,9 +6,13 @@ Alpine images are 30x times lighter than Debian images, which save a significant
 
 # Images
 
-## python-machine-learning-core
+## python-core
 
-Base images with Python 3.5 integrating 4 basic packages : 
+Alpine:3.7 base image with python 3.6.5 and python-dev 
+
+## ml-core 
+
+Alpine:3.7 base image with python with Python 3.6 and 4 packages : 
 * numpy
 * scipy
 * sklearn
