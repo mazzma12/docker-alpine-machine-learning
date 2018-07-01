@@ -1,7 +1,7 @@
 # Dockerfiles
 
 Host Dockerfiles running Alpine images with Python for machine learning projects.
-Alpine images are 30x times lighter than Debian images, which save a significantly amount of time (and money) during deploy: [Check it out](https://nickjanetakis.com/blog/the-3-biggest-wins-when-using-alpine-as-a-base-docker-imagA)
+Alpine images are 30x times lighter than Debian images, which save a significantly amount of time (and money) during deploy: [Check it out](https://nickjanetakis.com/blog/the-3-biggest-wins-when-using-alpine-as-a-base-docker-image)
 
 
 # Images
@@ -28,4 +28,7 @@ base image like ml-core with tools to deals with geodata :
 * geopandas 
 * Rtree and its C++ dependency libspatialindex 
 
+## References
+
+* [Tips and tricks with Alpine](http://blog.zot24.com/tips-tricks-with-alpine-docker/)
 
