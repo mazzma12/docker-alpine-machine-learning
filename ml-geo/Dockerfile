@@ -1,18 +1,44 @@
 FROM alpine:3.7
 
+ARG PANDAS_VERSION="0.22.0"
+ARG SCIKIT_VERSION="0.19.1"
+
 ENV MAIN_PKGS="\
-    # For GEO reqs
-    geos geos-dev gdal gdal-dev \
-    libressl2.7-libcrypto  \
-    freetype-dev libpng-dev \
-    # Core
-    python3 python3-dev lapack libstdc++" \
+        # For GEO reqs
+        geos \
+        geos-dev \
+        gdal \
+        gdal-dev \
+        libressl2.7-libcrypto  \
+        freetype-dev \
+        libpng-dev \
+        # Core
+        python3 \
+        python3-dev \
+        lapack \
+        libstdc++" \
     BUILD_PKGS="\
-    cmake make git \
-    file binutils \
-    g++ gfortran musl-dev lapack-dev" \
-    PIP_PKGS1="cython numpy scipy fiona shapely" \
-    PIP_PKGS2="pandas scikit-learn matplotlib geopandas rtree" 
+        cmake \
+        make \
+        git \
+        file \
+        binutils \
+        g++ \
+        gfortran \
+        musl-dev \
+        lapack-dev" \
+    PIP_PKGS1="\
+        cython \
+        numpy \
+        scipy \
+        fiona \
+        shapely" \
+    PIP_PKGS2="\
+        pandas==${PANDAS_VERSION} \
+        scikit-learn==${SCIKIT_VERSION} \
+        matplotlib \
+        geopandas \
+        rtree" 
 
 RUN echo "*** Install Main PAckages ***"; \
     echo http://dl-cdn.alpinelinux.org/alpine/edge/main | tee /etc/apk/repositories; \

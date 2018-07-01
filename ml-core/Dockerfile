@@ -4,23 +4,23 @@ ARG PANDAS_VERSION="0.22.0"
 ARG SCIKIT_VERSION="0.19.1"
 
 ENV MAIN_PKGS="\
-    python3 \
-    python3-dev \
-    # For Numpy, scipy
-    lapack \
-    libstdc++" \
+        python3 \
+        python3-dev \
+        # For Numpy, scipy
+        lapack \
+        libstdc++" \
     BUILD_PKGS="\
-    g++ \
-    gfortran \
-    musl-dev \
-    lapack-dev" \
+        g++ \
+        gfortran \
+        musl-dev \
+        lapack-dev" \
     PIP_PKGS1="\
-    cython \
-    numpy \
-    scipy" \
+        cython \
+        numpy \
+        scipy" \
     PIP_PKGS2="\
-    pandas==${PANDAS_VERSION} \
-    scikit-learn==${SCIKIT_VERSION}" 
+        pandas==${PANDAS_VERSION} \
+        scikit-learn==${SCIKIT_VERSION}" 
 
 RUN echo "*** Install Main PAckages ***"; \
     echo http://dl-cdn.alpinelinux.org/alpine/edge/main | tee /etc/apk/repositories; \
