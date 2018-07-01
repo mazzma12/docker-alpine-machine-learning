@@ -67,7 +67,6 @@ RUN echo "*** Clean Install ***" && \
     rm -r /usr/lib/python*/lib2to3                      && \
     rm -r /usr/lib/python*/turtledemo                   && \
     rm /usr/lib/python*/turtle.py                       && \
-    rm /usr/lib/python*/webbrowser.py                   && \
     rm /usr/lib/python*/doctest.py                      && \
     rm /usr/lib/python*/pydoc.py                        && \
     find /usr/lib/python3.*/ -name 'tests' -exec rm -r '{}' + && \
