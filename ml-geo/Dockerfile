@@ -27,7 +27,6 @@ RUN echo "*** Install Main PAckages ***"; \
     pip3 install --no-cache-dir ${PIP_PKGS1} && \
     pip3 install --no-cache-dir ${PIP_PKGS2}
 
-ARG N_PROC=
 RUN echo "**** compile spatialindex ****" && \
     git clone https://github.com/libspatialindex/libspatialindex /tmp/spatialindex && \
     cd /tmp/spatialindex && \
