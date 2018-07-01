@@ -28,12 +28,12 @@ RUN echo "*** Install Main PAckages ***"; \
     pip3 install --no-cache-dir ${PIP_PKGS2}
 
 RUN echo "**** compile spatialindex ****" && \
-    git clone https://github.com/libspatialindex/libspatialindex /tmp/spatialindex && \
-    cd /tmp/spatialindex && \
+    git clone https://github.com/libspatialindex/libspatialindex /opt/libspatialindex && \
+    cd /opt/libspatialindex && \
     cmake . \
     -DCMAKE_INSTALL_PREFIX=/usr && \
     make -j $(grep -c processor /proc/cpuinfo) && \
-    make install
+    make install && make clean
 
 RUN echo "*** Clean Install ***" && \
     find / -type d -name __pycache__ -exec rm -r {} +   && \
