@@ -38,7 +38,6 @@ RUN echo "*** Install Main PAckages ***"; \
 RUN echo "*** Clean Install ***" && \
     find / -type d -name __pycache__ -exec rm -r {} +   && \
     rm -r /usr/lib/python*/ensurepip                    && \
-    rm -r /usr/lib/python*/lib2to3                      && \
     rm -r /usr/lib/python*/turtledemo                   && \
     rm /usr/lib/python*/turtle.py                       && \
     apk del .builddeps && rm -rf /root/.cache
